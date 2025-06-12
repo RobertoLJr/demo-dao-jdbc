@@ -19,5 +19,10 @@ public class Main2 {
         System.out.println("\n=== TEST 2: department.findAll() ===");
         List<Department> deptList = departmentDao.findAll();
         System.out.println(deptList);
+
+        System.out.println("\n=== TEST 3: department.insert() ===");
+        departmentDao.insert(new Department(null, "Tools"));
+        deptList = departmentDao.findAll();
+        System.out.println(deptList);
     }
 }
