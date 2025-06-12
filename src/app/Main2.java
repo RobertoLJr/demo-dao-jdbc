@@ -31,5 +31,9 @@ public class Main2 {
         dept.setName("Household");
         departmentDao.update(dept);
         System.out.println("After update:  " + departmentDao.findById(5));
+
+        System.out.println("\n=== TEST 5: department.deleteById() ===");
+        departmentDao.deleteById(5);
+        departmentDao.findAll();
     }
 }
