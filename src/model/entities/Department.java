@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class Department implements Serializable {
-    private int id;
+    private Integer id;
     private String name;
 
     public Department(int id, String name) {
@@ -32,7 +32,7 @@ public class Department implements Serializable {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Department that = (Department) o;
-        return id == that.id;
+        return Objects.equals(id, that.id);
     }
 
     @Override
