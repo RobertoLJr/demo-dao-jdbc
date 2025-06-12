@@ -24,5 +24,12 @@ public class Main2 {
         departmentDao.insert(new Department(null, "Tools"));
         deptList = departmentDao.findAll();
         System.out.println(deptList);
+
+        System.out.println("\n=== TEST 4: department.update() ===");
+        dept = departmentDao.findById(5);
+        System.out.println("Before update: " + dept);
+        dept.setName("Household");
+        departmentDao.update(dept);
+        System.out.println("After update:  " + departmentDao.findById(5));
     }
 }
